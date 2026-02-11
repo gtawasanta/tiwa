@@ -386,4 +386,10 @@ window.toggleMenu = function() {
 };
 
 
+const serviceGrid = document.getElementById('service-grid');
+if (serviceGrid) {
+    serviceGrid.innerHTML = "ඔයාගේ content එක";
+}
+
+
 
