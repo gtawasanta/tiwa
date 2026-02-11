@@ -362,34 +362,4 @@ function toggleMenu() {
     }
 }
 
-// ලින්ක් එකක් එබුවම මෙනු එක ඉබේම වැහෙන්න (Mobile වලදී)
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('active');
-        document.querySelector('.mobile-menu-icon i').classList.replace('fa-times', 'fa-bars');
-    });
-});
-
-window.toggleMenu = function() {
-    const navLinks = document.querySelector('.nav-links');
-    const menuIcon = document.querySelector('.mobile-menu-icon i');
-    
-    if (navLinks && menuIcon) {
-        navLinks.classList.toggle('active');
-        // Icon එක මාරු කිරීම
-        if (navLinks.classList.contains('active')) {
-            menuIcon.className = 'fas fa-times';
-        } else {
-            menuIcon.className = 'fas fa-bars';
-        }
-    }
-};
-
-
-const serviceGrid = document.getElementById('service-grid');
-if (serviceGrid) {
-    serviceGrid.innerHTML = "ඔයාගේ content එක";
-}
-
-
 
