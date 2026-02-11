@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me | Tiwanka Deshan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { 
+            --bg: #010409; 
+            --accent: #00d2ff; 
+            --whatsapp: #25D366; 
+            --telegram: #0088cc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body { 
+            background-color: var(--bg); 
+            color: #fff; 
+            font-family: 'Lexend', sans-serif; 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            overflow: hidden;
+        }
+
+        /* 1. Animated Background Shapes */
+        .bg-shapes {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            filter: blur(80px);
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: float 15s infinite alternate ease-in-out;
+        }
+
+        .shape-1 { width: 400px; height: 400px; background: var(--accent); top: -10%; left: -10%; }
+        .shape-2 { width: 300px; height: 300px; background: var(--telegram); bottom: 10%; right: -5%; animation-delay: -5s; }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(100px, 50px) rotate(90deg); }
+        }
+
+        /* 2. Glass Card Design */
+        .contact-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 50px 40px;
+            border-radius: 40px;
+            text-align: center;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            animation: cardEntrance 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        @keyframes cardEntrance {
+            from { opacity: 0; transform: scale(0.8) translateY(50px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        /* 3. Pulsing Profile Icon */
+        .icon-box {
+            width: 80px; height: 80px;
+            background: rgba(0, 210, 255, 0.1);
+            border: 2px solid var(--accent);
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem; color: var(--accent);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 210, 255, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(0, 210, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 210, 255, 0); }
+        }
+
+        h1 { font-family: 'Michroma'; font-size: 1.5rem; margin-bottom: 10px; letter-spacing: 1px; }
+        p { color: #8b949e; margin-bottom: 35px; }
+
+        /* 4. Interactive Buttons */
+        .btn {
+            display: flex; align-items: center; justify-content: center;
+            gap: 15px; padding: 18px; border-radius: 20px;
+            text-decoration: none; font-weight: 700;
+            margin-bottom: 15px; transition: 0.4s;
+            position: relative; overflow: hidden;
+        }
+
+        .wa-btn { background: rgba(37, 211, 102, 0.1); border: 1px solid var(--whatsapp); color: #fff; }
+        .wa-btn:hover { background: var(--whatsapp); color: #000; transform: translateX(10px); }
+
+        .tg-btn { background: rgba(0, 136, 204, 0.1); border: 1px solid var(--telegram); color: #fff; }
+        .tg-btn:hover { background: var(--telegram); color: #fff; transform: translateX(10px); }
+
+        .btn i { font-size: 1.3rem; }
+
+        .back-link {
+            display: inline-block; margin-top: 25px;
+            color: #555; text-decoration: none; transition: 0.3s;
+        }
+        .back-link:hover { color: var(--accent); }
+
+    </style>
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
+    <div class="contact-card">
+        <div class="icon-box">
+            <i class="fas fa-paper-plane"></i>
+        </div>
+        <h1>Tiwanka</h1>
+        <p>Choose your preferred platform to start our collaboration.</p>
+
+       <style>
+    :root { 
+        /* කලින් තිබුණ ඒවාට අමතරව... */
+        --facebook: #1877F2; 
+    }
+
+    /* Facebook Button Style */
+    .fb-btn { 
+        background: rgba(24, 119, 242, 0.1); 
+        border: 1px solid var(--facebook); 
+        color: #fff; 
+    }
+    .fb-btn:hover { 
+        background: var(--facebook); 
+        color: #fff; 
+        transform: translateX(10px); 
+        box-shadow: 0 10px 30px rgba(24, 119, 242, 0.3); 
+    }
+</style>
+
+<div class="btn-group">
+    <a href="https://wa.me/94771067771?text=Hi%20Tiwanka!" class="btn wa-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    
+    <a href="https://t.me/Tiwankadeshan" class="btn tg-btn" target="_blank">
+        <i class="fab fa-telegram-plane"></i> Telegram
+    </a>
+
+    <a href="https://www.facebook.com/tiwankadeshan2" class="btn fb-btn" target="_blank">
+        <i class="fab fa-facebook-f"></i> Facebook
+    </a>
+</div>
+
+
+
+
+
+        
+
+        <a href="index.html" class="back-link"><i class="fas fa-chevron-left"></i> Back to Main</a>
+    </div>
+</body>
+</html>

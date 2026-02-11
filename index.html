@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiwanka Deshan | Galaxy Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<nav class="navbar">
+    
+    <div class="nav-container">
+        <a href="#" class="logo">TIWANKA <span>DESHAN</span></a>
+        <ul class="nav-links">
+            <li><a href="#" class="active">~/home</a></li>
+            <li><a href="#about">~/about</a></li>
+            <li><a href="#gallery">~/gallery</a></li>
+             <li><a href="#premium-services">~/Premium Services</a></li>
+            <li><a href="hire-me.html">~/contact</a></li>
+        </ul>
+        <div class="mobile-menu-icon" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+</div>
+    </div>
+</nav>
+
+
+    <canvas id="galaxy-canvas"></canvas>
+
+   <section class="hero-premium">
+    <div class="hero-content">
+        <div class="status-badge">
+    <span class="dot"></span> System Online • Dambulla, LK
+</div>
+        
+        <h1>Tiwanka <span>Deshan</span></h1>
+        <h2 class="devops-title">Creative Developer</h2>
+        
+        <p class="hero-description">
+            Creative Developer focused on building robust infrastructure, 
+            Web Solutions, and high-performance V2Ray systems.
+        </p>
+        
+       <div class="hero-action-btns">
+    <a href="#" class="btn-space">
+        <strong><i class="fas fa-file-download"></i> Download CV</strong>
+        <div id="container-stars">
+            <div id="stars"></div>
+        </div>
+        <div id="glow">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </a>
+
+    <a href="hire-me.html" class="btn-space contact-space">
+        <strong><i class="fas fa-terminal"></i> Initialize Contact</strong>
+        <div id="container-stars">
+            <div id="stars"></div>
+        </div>
+        <div id="glow">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </a>
+</div>
+
+        <div class="social-links-hero">
+    <a href="https://github.com/OYAGE_USER" target="_blank" class="social-icon">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/OYAGE_USER" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+</div>
+    </div>
+
+    <div class="hero-image-box">
+        <img src="logo.png" alt="Tiwanka Deshan">
+    </div>
+</section>
+
+<section class="github-stats-section">
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="stat-icon star"><i class="fas fa-star"></i></div>
+            <div class="stat-number">17+</div>
+            <div class="stat-label">GitHub Stars</div>
+            <div class="stat-sub">Across repositories</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon repo"><i class="fas fa-book-bookmark"></i></div>
+            <div class="stat-number">18</div>
+            <div class="stat-label">Repositories</div>
+            <div class="stat-sub">Public projects</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon followers"><i class="fas fa-users"></i></div>
+            <div class="stat-number">9</div>
+            <div class="stat-label">Followers</div>
+            <div class="stat-sub">GitHub community</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon forks"><i class="fas fa-code-branch"></i></div>
+            <div class="stat-number">9</div>
+            <div class="stat-label">Total Forks</div>
+            <div class="stat-sub">Repository forks</div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="about-me-section" id="about">
+    <div class="container">
+        <div class="about-header">
+            <span class="who-i-am">WHO I AM</span>
+            <h2 class="section-title-premium">About Me</h2>
+        </div>
+
+        <div class="about-content-wrapper">
+            <div class="about-description">
+                <p>I'm <span class="highlight-text">Tiwanka Deshan</span>, a Creative Developer passionate about building infrastructure and web solutions.</p>
+            </div>
+
+            <div class="premium-stat-card">
+                <div class="card-tag"><i class="fas fa-cake-candles"></i> AGE</div>
+                <div class="age-timer-premium">
+                    <div class="timer-main">
+                        <div class="time-block"><span id="years">00</span><label>Years</label></div>
+                        <div class="time-block"><span id="months">00</span><label>Months</label></div>
+                    </div>
+                    <div class="timer-sub">
+                        <div class="sub-block"><span id="days">00</span><small>Days</small></div>
+                        <div class="sub-block"><span id="hours">00</span><small>Hours</small></div>
+                        <div class="sub-block"><span id="mins">00</span><small>Mins</small></div>
+                        <div class="sub-block highlight-secs"><span id="secs">00</span><small>Secs</small></div>
+                    </div>
+                </div>
+                <div class="card-footer">Born September 8, 2009</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+    <div class="container">
+        <div class="gallery-header">
+            <span class="visual-log-tag">VISUAL LOG</span>
+            <h2 class="premium-gallery-title">Photo Gallery</h2>
+            <p class="premium-gallery-subtitle">Moments from my journey and the places where the work happens.</p>
+        </div>
+
+        <div class="gallery-tabs">
+            <button class="tab-btn active">All Captures</button>
+            <button class="tab-btn">Me</button>
+            <button class="tab-btn">Frend</button>
+        </div>
+
+        <div class="gallery-grid-premium">
+            <div class="photo-card-premium">
+                <div class="card-media">
+                    <img src="Palimant.jpg" alt="Office Buddies">
+                    <div class="card-badge"><i class="fas fa-briefcase"></i> </div>
+                    
+                </div>
+                <div class="card-body">
+                    <h3>Visit to Parliament of Sri Lanka</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-location-dot"></i>Sri Jayawardenepura Kotte, Sri Lanka</span>
+                        <span><i class="fas fa-building"></i>Parliament</span>
+                        <span><i class="fas fa-calendar"></i> 2025-01-05</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card-premium">
+                <div class="card-media">
+                    <img src="Crikat macg day.jpeg" alt="UI Team">
+                    <div class="card-badge"><i class="fas fa-briefcase"></i> </div>
+                </div>
+                <div class="card-body">
+                    <h3>At Dambulla International Stadium</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-location-dot"></i>Dambulla, Sri Lanka</span>
+                        <span><i class="fas fa-building"></i>Cricket Stadium</span>
+                        <span><i class="fas fa-calendar"></i>2026-02-12</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card-premium">
+                <div class="card-media">
+                    <img src="Photo shoot wasantha.jpeg" alt="Expanded Team">
+                    <div class="card-badge"><i class="fas fa-briefcase"></i></div>
+                </div>
+                <div class="card-body">
+                    <h3>NPP Public Rally - Special Occasi</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-location-dot"></i>Dambulla,Sri lanka</span>
+                        <span><i class="fas fa-building"></i>Gammudawa</span>
+                        <span><i class="fas fa-calendar"></i>2024/5/5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card-premium extra-photo hidden">
+                <div class="card-media">
+                    <img src="Crykat frend taru.jpeg" alt="Rajarata University">
+                    <div class="card-badge"><i class="fas fa-user"></i> Personal</div>
+                </div>
+                <div class="card-body">
+                    <h3>Personal Milestone</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-location-dot"></i> Dambulla, Sri Lanka</span>
+                        <span><i class="fas fa-university"></i> Cricket Stadium</span>
+                        <span><i class="fas fa-calendar"></i> 2026-02-14</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card-premium extra-photo hidden">
+                <div class="card-media">
+                    <img src="my.png" alt="Office Buddies 2.0">
+                    <div class="card-badge"><i class="fas fa-briefcase"></i> </div>
+                </div>
+                <div class="card-body">
+                    <h3>Weblankan Office Buddies 2.0</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-location-dot"></i> Nugegoda, Sri Lanka</span>
+                        <span><i class="fas fa-building"></i> Weblankan Office</span>
+                        <span><i class="fas fa-calendar"></i> 2025-12-20</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-action">
+            <button id="gallery-toggle-btn" class="premium-view-btn">
+                View Full Gallery <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="services-section" id="premium-services">
+    <div class="container">
+        <h2 class="section-title">Premium Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>V2Ray Selling</h3>
+                <p>High-speed tunneling services for unlimited browsing</p>
+                <div class="location-tag">
+                    <i class="fas fa-location-dot"></i> <span>Dambulla, Sri Lanka</span>
+                </div>
+                <a href="https://v2ray.speednetlk.me/" class="inquire-btn" style="text-decoration: none; display: block; text-align: center;">Inquire Now</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-code"></i></div>
+                <h3>Web Solutions</h3>
+                <p>Modern, responsive web architectures designed by Tiwanka Deshan.</p>
+                <div class="location-tag">
+                    <i class="fas fa-location-dot"></i> <span>Dambulla, Sri Lanka</span>
+                </div>
+                <a href="web-pricing.html" class="inquire-btn" style="text-decoration: none; display: block; text-align: center;">Inquire Now</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-camera"></i></div>
+                <h3>Photography</h3>
+                <p>Professional cinematic visuals captured</p>
+                <div class="location-tag">
+                    <i class="fas fa-location-dot"></i> <span>Dambulla, Sri Lanka</span>
+                </div>
+                <a href="photography.html" class="inquire-btn" style="text-decoration: none; display: block; text-align: center;">Inquire Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+
+   
+
+
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&family=Michroma&display=swap" rel="stylesheet">
+
+
+
+  
+
+<section class="workflow-section">
+    <div class="workflow-header">
+        <span class="badge" style="color: #00ff88; letter-spacing: 2px; font-weight: bold;">CI/CD WORKFLOW</span>
+        <h2 style="font-family: 'Michroma'; margin: 10px 0;">Automated Pipeline</h2>
+    </div>
+
+    <div class="pipeline-card">
+        <div class="pipeline-top" style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+            <div class="terminal-icon" style="color: #00ff88;"><i class="fas fa-terminal"></i></div>
+            <div style="text-align: left;">
+                <h4 style="margin:0; font-size: 0.9rem;">Deployment Pipeline</h4>
+                <small style="color: #8b949e; font-family: monospace;">status: <span id="pipeline-status">Running</span></small>
+            </div>
+        </div>
+
+        <div class="steps-container" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; padding: 0 10px;">
+            <div class="step-item" id="s1"><div class="dot-circle"><i class="fas fa-check"></i></div><small>Lint</small></div>
+            <div class="p-line" id="l1"></div>
+            <div class="step-item" id="s2"><div class="dot-circle"><i class="fas fa-check"></i></div><small>Build</small></div>
+            <div class="p-line" id="l2"></div>
+            <div class="step-item" id="s3"><div class="dot-circle"><i class="fas fa-check"></i></div><small>Test</small></div>
+            <div class="p-line" id="l3"></div>
+            <div class="step-item" id="s4"><div class="dot-circle"><i class="fas fa-server"></i></div><small>Deploy</small></div>
+        </div>
+
+        <div id="console-output" style="background: #000; padding: 15px; border-radius: 10px; font-family: monospace; font-size: 0.8rem; color: #8b949e; text-align: left; min-height: 100px;">
+            <div><span style="color: #00ff88;">></span> Initializing...</div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .pipeline-card { background: rgba(13, 17, 23, 0.9); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; max-width: 600px; margin: 0 auto; }
+    .dot-circle { width: 35px; height: 35px; border: 2px solid #30363d; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 5px; transition: 0.4s; color: #30363d; font-size: 0.8rem; }
+    .p-line { flex-grow: 1; height: 2px; background: #30363d; margin: -20px 10px 0; transition: 0.4s; }
+    .step-item { display: flex; flex-direction: column; align-items: center; }
+    
+    /* Animation Classes */
+    .step-item.active .dot-circle { border-color: #00ff88; color: #00ff88; box-shadow: 0 0 15px rgba(0,255,136,0.3); animation: pulse 1s infinite; }
+    .step-item.done .dot-circle { background: #00ff88; border-color: #00ff88; color: #000; }
+    .p-line.done { background: #00ff88; }
+
+    @keyframes pulse { 50% { opacity: 0.5; } }
+</style>
+
+
+
+<script>
+    const logBox = document.getElementById('console-output');
+    const statusText = document.getElementById('pipeline-status');
+
+    const runProcess = async () => {
+        const reset = () => {
+            for(let i=1; i<=4; i++) {
+                document.getElementById('s'+i).className = 'step-item';
+                if(i<4) document.getElementById('l'+i).className = 'p-line';
+            }
+            logBox.innerHTML = '<div><span style="color: #00ff88;">></span> Restarting Pipeline...</div>';
+        };
+
+        while(true) {
+            reset();
+            const stepsInfo = [
+                { s: 's1', l: 'l1', msg: 'Linting check passed.' },
+                { s: 's2', l: 'l2', msg: 'Production build successful.' },
+                { s: 's3', l: 'l3', msg: 'Unit tests 100% passed.' },
+                { s: 's4', l: null, msg: 'Deployed to Production!' }
+            ];
+
+            for(let i=0; i < stepsInfo.length; i++) {
+                let current = stepsInfo[i];
+                document.getElementById(current.s).classList.add('active');
+                statusText.innerText = 'Processing ' + (i+1) + '/4...';
+                
+                await new Promise(r => setTimeout(r, 2000)); // තත්පර 2ක් කැරකෙනවා
+                
+                document.getElementById(current.s).classList.remove('active');
+                document.getElementById(current.s).classList.add('done');
+                if(current.l) document.getElementById(current.l).classList.add('done');
+                
+                logBox.innerHTML += `<div><span style="color: #00ff88;">></span> ${current.msg}</div>`;
+            }
+
+            statusText.innerText = 'Success!';
+            await new Promise(r => setTimeout(r, 4000)); // ඉවර වෙලා තත්පර 4ක් නවතිනවා
+        }
+    };
+
+
+    runProcess();
+</script>
+
+ <section class="interests-section">
+    <div class="interests-header">
+        <span class="focus-tag">FOCUS AREAS</span>
+        <h2>Core Interests</h2>
+        <p>Specialized areas where I focus my expertise and passion for technology</p>
+    </div>
+
+    <div class="interests-grid">
+        <div class="interest-card">
+            <div class="i-icon blue"><i class="fas fa-server"></i></div>
+            <h3>V2Ray Systems</h3>
+            <p>Building and managing high-performance tunneling infrastructure.</p>
+        </div>
+
+        <div class="interest-card">
+            <div class="i-icon purple"><i class="fas fa-code"></i></div>
+            <h3>Web Architectures</h3>
+            <p>Designing modern, responsive and user-centric web solutions.</p>
+        </div>
+
+        <div class="interest-card">
+            <div class="i-icon green"><i class="fas fa-network-wired"></i></div>
+            <h3>Network Security</h3>
+            <p>Ensuring encrypted and secure connections across global servers.</p>
+        </div>
+
+        <div class="interest-card">
+            <div class="i-icon yellow"><i class="fas fa-bolt"></i></div>
+            <h3>Optimization</h3>
+            <p>Dynamic resource tuning for low-latency performance.</p>
+        </div>
+    </div>
+</section>   
+
+<section class="devops-arsenal-premium">
+    <div class="arsenal-header">
+        <span class="mission-tag">MISSION STACK</span>
+        <h2 class="arsenal-title">DevOps Arsenal</h2>
+        <p class="arsenal-subtitle">Center spotlight highlights focused tech</p>
+    </div>
+
+    <div class="spotlight-container">
+        <div class="spotlight-track" id="arsenalTrack">
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/digitalocean-2.svg" alt="DigitalOcean"><span>DigitalOcean</span></div>
+            
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/gitlab.svg"><span>GitLab</span></div>
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/jenkins-1.svg"><span>Jenkins</span></div>
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/proxmox.svg"><span>Proxmox</span></div>
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/bash-1.svg"><span>Bash</span></div>
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/python-5.svg"><span>Python</span></div>
+            <div class="tech-item active"><img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg"><span>Git</span></div>
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/terraform-enterprise.svg"><span>Terraform</span></div>
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/ansible.svg"><span>Ansible</span></div>
+          
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg"><span>AWS</span></div>
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/docker-3.svg"><span>Docker</span></div>
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/grafana.svg"><span>Grafana</span></div>
+            <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/linux-tux.svg"><span>Linux</span></div>
+          
+        </div>
+    </div>
+</section>
+<section class="footer-section">
+    <h1>Let's Connect</h1>
+    <p class="footer-desc">I'm always excited to hear about new projects and collaboration opportunities.<br>
+    Whether you have a question or just want to say hi, feel free to reach out.</p>
+
+    <div class="footer-container">
+        <div class="contact-box">
+            <div class="contact-item">
+                <div class="icon-circle"><i class="fas fa-at"></i></div>
+                <div class="details">
+                    <small>Email</small>
+                    <p>rgtiwanka@gmail.com</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                <div class="details">
+                    <small>Phone</small>
+                    <p>+94 77 106 7771</p>
+                </div>
+            </div>
+            <div class="social-box">
+                <p>Find me on Social Media</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-box">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126438.28548022137!2d80.575916!3d7.865324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae339591942095f%3A0xc6659128f64582!2sDambulla!5e0!3m2!1sen!2slk!4v1710000000000!5m2!1sen!2slk" 
+                width="100%" height="100%" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy">
+            </iframe>
+            
+               
+                  
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2026 Tiwanka Deshan.
+    </div>
+</section>
+
+<button id="scrollTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<style>
+    #scrollTopBtn {
+        display: none; /* පටන් ගද්දී පේන්නේ නැහැ */
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        border: none;
+        outline: none;
+        background: linear-gradient(45deg, #00d2ff, #00ff88); /* ඔයාගේ අනිත් බටන් වල පාටමයි */
+        color: #000;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 60%;
+        font-size: 1.2rem;
+        box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+        transition: 0.3s;
+    }
+
+    #scrollTopBtn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 255, 136, 0.6);
+        background: #fff;
+    }
+</style>
+
+<script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    // පේජ් එක 300px ට වඩා පල්ලෙහාට ගියොත් බටන් එක පෙන්වන්න
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+
+    // බටන් එක එබුවම හෙමීට උඩට යන්න
+    scrollBtn.onclick = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+</script>
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<style>
+    /* මුළු කන්ටේනර් එක */
+    .progress-container {
+        position: fixed;
+        top: 0;
+        z-index: 10000; /* අනිත් හැමදේටම උඩින් */
+        width: 100%;
+        height: 4px;
+        background: transparent;
+    }
+
+    /* ඇත්තටම දික් වෙන නිල් පාට ඉර */
+    .progress-bar {
+        height: 4px;
+        background: linear-gradient(to right, #00d2ff, #00ff88); /* වමේ සිට දකුණට පාට වෙනස් වෙනවා */
+        width: 0%; /* පටන් ගද්දී 0යි */
+        box-shadow: 0 0 15px rgba(0, 210, 255, 0.7);
+        transition: width 0.1s ease-out;
+    }
+</style>
+
+<script>
+    window.onscroll = function() {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    };
+</script>
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<button id="scrollTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<style>
+    /* Progress Bar Styles */
+    .progress-container {
+        position: fixed;
+        top: 0;
+        z-index: 10001;
+        width: 100%;
+        height: 4px;
+        background: transparent;
+    }
+    .progress-bar {
+        height: 4px;
+        background: linear-gradient(to right, #00d2ff, #00ff88);
+        width: 0%;
+        box-shadow: 0 0 15px rgba(0, 210, 255, 0.7);
+    }
+
+    /* Scroll to Top Button Styles */
+    #scrollTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 100px; /* Music bar එකට උඩින් තියන්න */
+        right: 30px;
+        z-index: 10000;
+        border: none;
+        outline: none;
+        background: linear-gradient(45deg, #00d2ff, #00ff88);
+        color: #000;
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+        transition: 0.3s;
+    }
+    #scrollTopBtn:hover {
+        transform: translateY(-5px);
+        background: #fff;
+    }
+</style>
+
+<script>
+    window.onscroll = function() {
+        // 1. Progress Bar Logic
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+
+        // 2. Scroll Top Button Logic
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        if (winScroll > 300) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+
+    // බටන් එක එබුවම හෙමීට උඩට යන්න
+    document.getElementById("scrollTopBtn").onclick = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+</script>
+<div class="grid-bg"></div>
+<div class="main-glow"></div>
+
+<audio id="bgMusic" loop>
+  <source src="gajaba.mp3" type="audio/mpeg">
+  ඔබේ බ්‍රවුසරය මෙම ශබ්දයට සහය නොදක්වයි.
+</audio>
+
+<button id="muteBtn" onclick="toggleMute()">🔈 Unmute</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
