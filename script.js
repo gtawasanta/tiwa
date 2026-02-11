@@ -370,6 +370,20 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+window.toggleMenu = function() {
+    const navLinks = document.querySelector('.nav-links');
+    const menuIcon = document.querySelector('.mobile-menu-icon i');
+    
+    if (navLinks && menuIcon) {
+        navLinks.classList.toggle('active');
+        // Icon එක මාරු කිරීම
+        if (navLinks.classList.contains('active')) {
+            menuIcon.className = 'fas fa-times';
+        } else {
+            menuIcon.className = 'fas fa-bars';
+        }
+    }
+};
 
 
 
