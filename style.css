@@ -3007,3 +3007,495 @@ body::after {
     }
 }
 
+/* --- Career Timeline Styles --- */
+.timeline-section {
+    padding: 80px 10%;
+    color: #fff;
+    font-family: 'Lexend', sans-serif;
+    position: relative;
+    z-index: 10; /* Background එකට උඩින් පේන්න */
+}
+
+.exp-header {
+    margin-bottom: 60px;
+}
+
+.exp-tag {
+    color: #00ff88; /* කොළ පාට Tag එක */
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.exp-title {
+    font-family: 'Michroma', sans-serif;
+    font-size: 2.2rem;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+/* Timeline එකේ ප්‍රධාන ඉර */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1); /* අළු පාට තුනී ඉර */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.container-left {
+    left: 0;
+}
+
+.container-right {
+    left: 50%;
+}
+
+/* කොළ පාට Glow වෙන තිත් */
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #00ff88;
+    background: #010409;
+    border-radius: 50%;
+    top: 30px;
+    z-index: 1;
+    box-shadow: 0 0 12px rgba(0, 255, 136, 0.6);
+}
+
+.container-left .timeline-dot {
+    right: -9px;
+}
+
+.container-right .timeline-dot {
+    left: -9px;
+}
+
+/* කාඩ් එකේ ඩිසයින් එක */
+.timeline-card {
+    background: rgba(13, 17, 23, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.timeline-card:hover {
+    border-color: rgba(0, 255, 136, 0.3); /* Mouse එක ගෙනිච්චම කොළ පාට glow එකක් */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.t-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.t-company {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* දිනය තියෙන Pill එක */
+.t-date {
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: #8b949e;
+}
+
+.t-role {
+    color: #00ff88;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+.t-desc {
+    color: #8b949e;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* දම් පාට Tags */
+.t-tags span {
+    display: inline-block;
+    border: 1px solid #7B68EE; /* දම් පාට බෝඩර් එක */
+    color: #b09cff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-family: monospace;
+    background: rgba(123, 104, 238, 0.05); /* ඇතුලේ ලා දම් පාටක් */
+}
+
+/* --- Mobile View (ෆෝන් එකට ගැලපෙන විදිහට හැදීම) --- */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 20px; /* ඉර වම් පැත්තටම ගන්නවා */
+    }
+    
+    .timeline-container {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 0;
+        left: 0;
+    }
+    
+    .container-left .timeline-dot, 
+    .container-right .timeline-dot {
+        left: 11px; /* තිත් ටික ඉරට සෙට් කරනවා */
+    }
+    
+    .t-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+}
+
+/* --- Video Background Styles --- */
+.loader-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* වීඩියෝ එක screen එකට fit කරනවා */
+    z-index: -2; /* හැමදේටම වඩා පිටිපස්සට යවනවා */
+}
+
+.loader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 4, 9, 0.6); /* වීඩියෝ එක උඩින් පොඩි අඳුරක් දානවා අකුරු පේන්න */
+    z-index: -1;
+}
+
+/* කලින් තිබ්බ loader-content එකේ z-index එක උඩට ගේමු */
+.loader-content {
+    text-align: center;
+    animation: popup 1s ease-out forwards;
+    z-index: 1; /* Overlay එකට උඩින් පේන්න */
+    position: relative;
+}
+
+/* --- Avurudu Loader Styles --- */
+#avurudu-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #010409; /* ඔයාගේ සයිට් එකේ dark background එක */
+    z-index: 999999; /* හැමදේටම වඩා උඩින් පේන්න */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+}
+
+.loader-content {
+    text-align: center;
+    animation: popup 1s ease-out forwards;
+}
+
+.sun-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: spin 15s linear infinite, glow 2s ease-in-out infinite alternate;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+.avurudu-greeting {
+    font-family: 'Michroma', sans-serif;
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, #FFD700, #FF4500);
+    
+    /* මේ තියෙන්නේ ඔයාගේ කෝඩ් එක */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* මේ අලුතින් දාන Standard කෝඩ් එක (කහ ඉර අයින් වෙන්න) */
+    background-clip: text;
+    color: transparent;
+    
+    margin-bottom: 10px;
+    text-shadow: 0 5px 15px rgba(255, 69, 0, 0.2);
+}
+
+.avurudu-sub {
+    color: #8b949e;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.loading-bar-container {
+    width: 250px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loading-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #FFD700, #FF4500);
+    animation: loadProgress 3.5s ease-in-out forwards;
+}
+
+@keyframes popup {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes loadProgress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* JS එකෙන් මේ class එක දාලා loader එක අයින් කරනවා */
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* --- Blinking & Moving Half-Mandala Styles --- */
+.side-avurudu-decor {
+    position: fixed;
+    width: 350px; /* ෆොටෝ එකේ සයිස් එක */
+    z-index: 999999;
+    pointer-events: none;
+    opacity: 0;
+    animation: blinkAroundEdges 16s infinite;
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.9)); /* රන්වන් එළිය */
+}
+
+/* තැන් 4 ට හැරිලා Blink වෙන Animation එක */
+@keyframes blinkAroundEdges {
+    /* 1. වම් පැත්තේ අයිනට (Left Edge) */
+    0%   { top: 50vh; left: -140px; transform: translateY(-50%) rotate(90deg); opacity: 0; }
+    10%  { top: 50vh; left: -140px; transform: translateY(-50%) rotate(90deg); opacity: 1; }
+    20%  { top: 50vh; left: -140px; transform: translateY(-50%) rotate(90deg); opacity: 0; }
+
+    /* 2. උඩ අයිනට (Top Edge) */
+    24%  { top: -140px; left: 50vw; transform: translateX(-50%) rotate(180deg); opacity: 0; }
+    35%  { top: -140px; left: 50vw; transform: translateX(-50%) rotate(180deg); opacity: 1; }
+    45%  { top: -140px; left: 50vw; transform: translateX(-50%) rotate(180deg); opacity: 0; }
+
+    /* 3. දකුණු පැත්තේ අයිනට (Right Edge) */
+    49%  { top: 50vh; left: calc(100vw - 210px); transform: translateY(-50%) rotate(-90deg); opacity: 0; }
+    60%  { top: 50vh; left: calc(100vw - 210px); transform: translateY(-50%) rotate(-90deg); opacity: 1; }
+    70%  { top: 50vh; left: calc(100vw - 210px); transform: translateY(-50%) rotate(-90deg); opacity: 0; }
+
+    /* 4. පල්ලෙහා අයිනට (Bottom Edge) */
+    74%  { top: calc(100vh - 210px); left: 50vw; transform: translateX(-50%) rotate(0deg); opacity: 0; }
+    85%  { top: calc(100vh - 210px); left: 50vw; transform: translateX(-50%) rotate(0deg); opacity: 1; }
+    95%  { top: calc(100vh - 210px); left: 50vw; transform: translateX(-50%) rotate(0deg); opacity: 0; }
+
+    100% { top: 50vh; left: -140px; transform: translateY(-50%) rotate(90deg); opacity: 0; }
+}
+
+/* --- Gallery Mobile View Fix (ගැලරි එක ෆෝන් එකට හැදීම) --- */
+@media (max-width: 768px) {
+    .gallery-grid-premium {
+        display: flex !important;
+        flex-direction: column !important; /* ෆොටෝ එකක් යටින් තව එකක් එන්න හදමු */
+        align-items: center;
+        gap: 25px;
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .photo-card-premium {
+        width: 100% !important;
+        max-width: 350px !important; /* ෆෝන් එකේ තිරයට ගානට */
+        margin: 0 auto;
+    }
+
+    .photo-card-premium .card-media img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
+    }
+}
+
+/* --- VPS Button & Modal Styles --- */
+
+.vps-floating-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px; /* දකුණු පැත්තේ පල්ලෙහා */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.floating-icon-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(1, 4, 9, 0.6);
+    backdrop-filter: blur(10px);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vps-glow {
+    border: 2px solid rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+    color: #00ff88;
+}
+.vps-glow:hover {
+    box-shadow: 0 0 35px rgba(0, 255, 136, 0.9);
+    transform: scale(1.05);
+}
+
+.control-text {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* --- මෙතනින් තමයි පටන් ගද්දිම පැනල් එක Hide කරන්නේ --- */
+.vps-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(1, 4, 9, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* මුලින් පේන්නේ නෑ */
+    visibility: hidden; /* මුලින් පේන්නේ නෑ */
+    transition: 0.4s ease;
+}
+
+.vps-modal-overlay.show {
+    opacity: 1; /* බටන් එක එබුවම පේනවා */
+    visibility: visible;
+}
+
+.vps-panel {
+    background: #161b22;
+    width: 320px;
+    border-radius: 12px;
+    padding: 20px;
+    color: #c9d1d9;
+    font-family: 'Lexend', sans-serif;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.05);
+    transform: translateY(30px) scale(0.95);
+    transition: 0.4s ease;
+}
+
+.vps-modal-overlay.show .vps-panel {
+    transform: translateY(0) scale(1);
+}
+
+/* Panel Design Elements */
+.vps-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 15px; }
+.vps-header h3 { margin: 0; color: #fff; font-size: 1.2rem; }
+#close-vps-btn { background: transparent; border: none; color: #8b949e; font-size: 1.5rem; cursor: pointer; transition: 0.2s; }
+#close-vps-btn:hover { color: #ff4444; }
+.vps-section-title { font-size: 0.9rem; color: #8b949e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.vps-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.vps-card { background: #21262d; border-radius: 8px; padding: 12px; flex: 1 1 45%; display: flex; align-items: center; gap: 12px; }
+.vps-card.full-width { flex: 1 1 100%; }
+.vps-icon-box { width: 30px; height: 30px; background: #161b22; border-radius: 6px; display: flex; justify-content: center; align-items: center; }
+.status-dot { width: 10px; height: 10px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 8px #00ff88; }
+.vps-info small { display: block; font-size: 0.7rem; color: #8b949e; }
+.vps-info span { font-weight: 600; font-size: 0.9rem; color: #fff; }
+.status-online { color: #00ff88 !important; }
+.vps-resources { background: #21262d; padding: 15px; border-radius: 8px; }
+.res-item { margin-bottom: 12px; }
+.res-labels { display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px; color: #c9d1d9; }
+.res-bar-bg { width: 100%; height: 6px; background: #161b22; border-radius: 10px; overflow: hidden; }
+.res-bar-fill { height: 100%; background: #00ff88; border-radius: 10px; box-shadow: 0 0 10px rgba(0,255,136,0.5); transition: width 1.5s ease-in-out; }
+
+/* --- බටන් එක ගොඩේ තියෙන එක හැදීම (Force Fix) --- */
+
+/* VPS බටන් එක යටටම දාමු */
+.vps-floating-container {
+    bottom: 10px !important;
+    right: 1830px !important;
+}
+
+/* උඩට යන ඊතලේ තියෙන බටන් එක VPS එකට උඩින් තියමු */
+#scrollTopBtn {
+    bottom: 75px !important; 
+    right: 35px !important;
+}
+
+/* --- Mobile Fix for VPS Button --- */
+
+/* බටන් එක හැමදේටම වඩා උඩින් තියන්න බල කිරීම */
+.vps-floating-container {
+    z-index: 999999 !important; 
+    pointer-events: auto !important;
+}
+
+/* ෆෝන් වලට පමණක් අදාළ වෙනස්කම් */
+@media screen and (max-width: 768px) {
+    .vps-floating-container {
+        bottom: 40px !important; /* ෆෝන් එකේ යටින් තියෙන බාධක මගාරින්න ටිකක් උඩට ගමු */
+        left: 20px !important; /* ඔයාගේ ෆොටෝ එකේ වගේ වම් පැත්තෙම තියමු */
+        right: auto !important; /* දකුණු පැත්ත අයින් කරමු */
+    }
+
+    /* ෆෝන් එකට ගැලපෙන්න Popup Panel එකේ සයිස් එක හදමු */
+    .vps-panel {
+        width: 90vw !important; /* ෆෝන් එකේ පළලට ගානට හැඩගැහෙනවා */
+        max-width: 320px !important;
+        margin: 0 auto;
+    }
+}
