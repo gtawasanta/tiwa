@@ -325,7 +325,33 @@
         </div>
     </div>
 </section>
-    
+<section class="tools-section" id="my-tools">
+    <div class="container">
+        <div class="workflow-header" style="text-align: center;">
+            <span class="badge" style="color: #00d2ff; letter-spacing: 2px; font-weight: bold;">UTILITIES</span>
+            <h2 style="font-family: 'Michroma'; margin: 10px 0;">Developer Tools</h2>
+            <p style="color: #8b949e;">Handy utilities for network and security management.</p>
+        </div>
+        
+        <div class="tools-grid">
+            <div class="tool-card" data-aos="fade-up">
+                <div class="tool-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>My IP Checker</h3>
+                <p>Check your current public IPv4 address instantly.</p>
+                <div class="tool-display" id="ip-display">Click button to check</div>
+                <button class="tool-btn" onclick="fetchIP()">Check IP</button>
+            </div>
+
+            <div class="tool-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="tool-icon"><i class="fas fa-key"></i></div>
+                <h3>Secure PassGen</h3>
+                <p>Generate a strong 16-character random password.</p>
+                <div class="tool-display" id="pass-display">Ready to generate</div>
+                <button class="tool-btn" onclick="generatePass()">Generate Password</button>
+            </div>
+        </div>
+    </div>
+</section>    
 
 
 
