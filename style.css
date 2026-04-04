@@ -3499,3 +3499,89 @@ body::after {
         margin: 0 auto;
     }
 }
+/* --- Mini Tools Section Styles --- */
+.tools-section {
+    padding: 80px 10%;
+}
+
+.tools-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.tool-card {
+    background: rgba(13, 17, 23, 0.6);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.tool-card:hover {
+    border-color: #00d2ff;
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.tool-icon {
+    font-size: 2.5rem;
+    color: #00d2ff;
+    margin-bottom: 15px;
+}
+
+.tool-card h3 {
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.tool-card p {
+    color: #8b949e;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.tool-display {
+    background: #010409;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: #00ff88; /* කොළ පාටින් උත්තරේ පෙන්වයි */
+    margin-bottom: 20px;
+    word-break: break-all;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tool-btn {
+    background: transparent;
+    border: 1px solid #00d2ff;
+    color: #00d2ff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Lexend', sans-serif;
+    font-weight: bold;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tool-btn:hover {
+    background: #00d2ff;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
+}
