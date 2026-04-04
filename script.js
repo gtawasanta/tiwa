@@ -361,5 +361,36 @@ function toggleMenu() {
         menuIcon.classList.add('fa-bars');
     }
 }
+// --- Developer Tools Logic ---
 
+// 1. IP Checker 
+function fetchIP() {
+    const display = document.getElementById('ip-display');
+    display.innerText = "Fetching IP...";
+    display.style.color = "#8b949e";
+
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            display.innerText = data.ip;
+            display.style.color = "#00ff88"; // ආයෙත් කොළ පාට කරනවා
+        })
+        .catch(error => {
+            display.innerText = "Connection Error";
+            display.style.color = "#ff4444";
+        });
+}
+
+// 2. Password Generator
+function generatePass() {
+    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+    let pass = "";
+    // අකුරු 16ක පාස්වර්ඩ් එකක් හදනවා
+    for (let i = 0; i < 16; i++) {
+        pass += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    const display = document.getElementById('pass-display');
+    display.innerText = pass;
+    display.style.color = "#00ff88";
+}
 
